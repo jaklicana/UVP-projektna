@@ -4,7 +4,7 @@ import time
 #pozdrav 
 ime = input("Kako ti je ime?")
 
-print('Živjo, ' + ime + '! Čas za igro vislic!')
+print('Živjo, ' + ime + '! Čas je za igro vislic!')
 
 print (" ")
 

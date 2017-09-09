@@ -12,10 +12,7 @@ print (" ")
 #počakaj 1s
 time.sleep(1)
 
-print("""Prosim izberi kategorijo.
-Izbiraš lahko med temami: živali, barve..
-Vnesi z za živali, b za barve.
-Začni z ugibanjem...""")
+print('Začni z ugibanjem...')
 time.sleep(0.5)
 
 vislice = ['''
@@ -75,22 +72,12 @@ vislice = ['''
         |
  =========''']
 seznam_besed = ['letalo', 'kozarec']
-zivali = ['zebra', 'medved', 'riba']
-barve = ['modra', 'zelena', 'rumena']
+
 
 
 def nakljucna_beseda(seznam_besed):
     besedni_indeks = random.randint(0, len(seznam_besed) - 1)
     return seznam_besed[besedni_indeks]
-
-def nakljucna_beseda(zivali):
-    zivali_indeks = random.randint(0, len(zivali) - 1)
-    return zivali[zivali_indeks]
-
-def nakljucna_beseda(barve):
-    barve_indeks = random.randint(0, len(barve) - 1)
-    return barve[barve_indeks]
-
   
 # funkcija prikazi_tablo nariše stanje vislic
 def prikazi_tablo(vislice, napacne_crke, pravilne_crke, resitev):
@@ -126,16 +113,9 @@ def ugani(ze_ugibano):
                  print('Ugani ČRKO.')
             else:
                 return ugib
-
-#tukaj vprašamo uporabnika naj vnese začetno črko za kategorijo, če izbere napačno črko mu vrže ven eno izmed seznam_besed
-if input().lower().startswith('z'):
-        resitev = nakljucna_beseda(zivali)
-else:
-        resitev = nakljucna_beseda(seznam_besed)
               
 # funkcija igraj je ena iteracaija igre vislice
 def igraj():
-    print('VISLICE ')
 # Definicija spremenjljivk    
     napacne_crke = ''  # seznam napačnih črk
     pravilne_crke = '' # seznam pravilno uganjenih črk
@@ -171,8 +151,9 @@ while igraj_se_enkrat:
     igraj()
     print('Bi rad igral še enkrat? (da ali ne)')
     odgovor = input().lower().startswith('d')
-    if odgovor == 'd':
+    if odgovor == 'da':
         igraj_se_enkrat == True
     else:
-        igraj_se_enkrat == False
+        break
     
+

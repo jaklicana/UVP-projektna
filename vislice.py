@@ -176,4 +176,3 @@ while igraj_se_enkrat:
     else:
         igraj_se_enkrat == False
     
-

@@ -152,8 +152,8 @@ while igraj_se_enkrat:
     print('Bi rad igral še enkrat? (da ali ne)')
     odgovor = input().lower().startswith('d')
     if odgovor == 'da':
-        igraj_se_enkrat == True
+        igraj_se_enkrat = True
     else:
-        break
+        igraj_se_enkrat = False
     
 
